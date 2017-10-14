@@ -334,7 +334,7 @@
               <MiscControls>--C99</MiscControls>
               <Define>USE_HAL_DRIVER,STM32F407xx</Define>
               <Undefine></Undefine>
-              <IncludePath>../Inc;   ../Drivers/STM32F4xx_HAL_Driver/Inc;   ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;   ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;   ../Middlewares/Third_Party/FreeRTOS/Source/include;   ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;   ../Drivers/CMSIS/Include;   ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;   ..\SYSTEM</IncludePath>
+              <IncludePath>../Inc;    ../Drivers/STM32F4xx_HAL_Driver/Inc;    ../Drivers/STM32F4xx_HAL_Driver/Inc/Legacy;    ../Middlewares/Third_Party/FreeRTOS/Source/portable/RVDS/ARM_CM4F;    ../Middlewares/Third_Party/FreeRTOS/Source/include;    ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS;    ../Drivers/CMSIS/Include;    ../Drivers/CMSIS/Device/ST/STM32F4xx/Include;    ..\SYSTEM;    ..\HADEWARE</IncludePath>
             </VariousControls>
           </Cads>
           <Aads>
@@ -502,6 +502,21 @@
               <FileType>1</FileType>
               <FilePath>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_flash_ramfunc.c</FilePath>
             </File>
+            <File>
+              <FileName>stm32f4xx_hal_sram.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_hal_sram.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_ll_fsmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Drivers/STM32F4xx_HAL_Driver/Src/stm32f4xx_ll_fsmc.c</FilePath>
+            </File>
+            <File>
+              <FileName>stm32f4xx_ll_fmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\Drivers\STM32F4xx_HAL_Driver\Src\stm32f4xx_ll_fmc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -562,6 +577,11 @@
               <FileType>1</FileType>
               <FilePath>../Src/usart.c</FilePath>
             </File>
+            <File>
+              <FileName>fsmc.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>../Src/fsmc.c</FilePath>
+            </File>
           </Files>
         </Group>
         <Group>
@@ -584,6 +604,16 @@
               <FileName>usrt.c</FileName>
               <FileType>1</FileType>
               <FilePath>..\SYSTEM\usrt.c</FilePath>
+            </File>
+          </Files>
+        </Group>
+        <Group>
+          <GroupName>HADEWARE</GroupName>
+          <Files>
+            <File>
+              <FileName>lcd.c</FileName>
+              <FileType>1</FileType>
+              <FilePath>..\HADEWARE\lcd.c</FilePath>
             </File>
           </Files>
         </Group>

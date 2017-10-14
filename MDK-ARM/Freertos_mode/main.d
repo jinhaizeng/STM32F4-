@@ -25,6 +25,8 @@ freertos_mode\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_cortex.h
 freertos_mode\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash.h
 freertos_mode\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ex.h
 freertos_mode\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_flash_ramfunc.h
+freertos_mode\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_sram.h
+freertos_mode\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_ll_fsmc.h
 freertos_mode\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr.h
 freertos_mode\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_pwr_ex.h
 freertos_mode\main.o: ../Drivers/STM32F4xx_HAL_Driver/Inc/stm32f4xx_hal_tim.h
@@ -48,3 +50,7 @@ freertos_mode\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/semphr.
 freertos_mode\main.o: ../Middlewares/Third_Party/FreeRTOS/Source/include/event_groups.h
 freertos_mode\main.o: ../Inc/usart.h
 freertos_mode\main.o: ../Inc/gpio.h
+freertos_mode\main.o: ../Inc/fsmc.h
+freertos_mode\main.o: ..\HADEWARE\lcd.h
+freertos_mode\main.o: ..\SYSTEM\sys.h
+freertos_mode\main.o: D:\MDK5.12\ARM\ARMCC\Bin\..\include\stdlib.h
