@@ -54,3 +54,6 @@ freertos_mode\freertos.o: ../Inc/usart.h
 freertos_mode\freertos.o: ..\HADEWARE\lcd.h
 freertos_mode\freertos.o: D:\MDK5.12\ARM\ARMCC\Bin\..\include\stdlib.h
 freertos_mode\freertos.o: ../Inc/fsmc.h
+freertos_mode\freertos.o: ..\HADEWARE\key.h
+freertos_mode\freertos.o: ../Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS/cmsis_os.h
+freertos_mode\freertos.o: ../Drivers/CMSIS/Include/core_cmFunc.h

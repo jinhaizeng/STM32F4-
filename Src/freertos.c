@@ -42,6 +42,7 @@
 #include "uart.h"
 #include "usart.h"
 #include "lcd.h"
+#include "key.h"
 /* USER CODE END Includes */
 
 /* Variables -----------------------------------------------------------------*/
@@ -127,10 +128,10 @@ void Func_LED(void const * argument)
   /* Infinite loop */
   for(;;)
   {
-    HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
-    osDelay(500);
-    HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
-    osDelay(500);
+//    HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
+//    osDelay(500);
+//    HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
+//    osDelay(500);
     
     osDelay(1);
   }
@@ -174,6 +175,7 @@ void Func_WIFI(void const * argument)
 {
   /* USER CODE BEGIN Func_LED */
 	u8 length;
+  u8 key;
   /* Infinite loop */
   for(;;)
   {
@@ -187,7 +189,28 @@ void Func_WIFI(void const * argument)
 			USART3_RX_STA=0;
 		}
     //HAL_UART_Transmit(&huart3,(uint8_t*)m ,3,1000);
+    key=KEY_Scan(0);            //按键扫描
+     printf("%d",key);
+				switch(key)
+				{				 
+					case  WKUP_PRES:	//控制LED0,LED1互斥点亮
+								HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
+								HAL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
+								break;
+					case  KEY2_PRES:	//控制LED0翻转
+								 HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
+								break;
+					case  KEY1_PRES:	//控制LED1翻转	 
+								 HAL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
+								break;
+					case  KEY0_PRES:	//同时控制LED0,LED1翻转 
+								 HAL_GPIO_TogglePin(LED0_GPIO_Port,LED0_Pin);
+								 HAL_GPIO_TogglePin(LED1_GPIO_Port,LED1_Pin);
+								break;
+			}
+        
     osDelay(1);
+    
     
   }
 }
